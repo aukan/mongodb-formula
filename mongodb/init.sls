@@ -14,9 +14,6 @@
 {% set db_path        = settings.get('db_path', '/data/db') %}
 {% set log_path       = settings.get('log_path', '/var/log/mongodb') %}
 
-include:
-  - .tools
-
 mongodb_package:
 {% if use_ppa %}
   pkgrepo.managed:
